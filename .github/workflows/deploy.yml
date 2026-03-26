@@ -1,5 +1,5 @@
 # ================================================
-# GitHub Actions CI/CD Pipeline — Simplified
+# GitHub Actions CI/CD Pipeline — Fixed
 # ================================================
 
 name: CI/CD Pipeline — Deploy to GitHub Pages
@@ -27,7 +27,9 @@ jobs:
           test -f index.html && echo "✓ index.html found" || (echo "✗ index.html missing!" && exit 1)
           test -f style.css  && echo "✓ style.css found"  || (echo "✗ style.css missing!"  && exit 1)
           test -f script.js  && echo "✓ script.js found"  || (echo "✗ script.js missing!"  && exit 1)
-          echo "✓ All files present!"
+          echo "All files present!"
+          echo "Listing all files for debug:"
+          ls -la
 
   # ---- JOB 2: Deploy to GitHub Pages ----
   deploy:
@@ -44,13 +46,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: List files before deploy
+        run: |
+          echo "Files being deployed:"
+          ls -la
+          echo "Confirming script.js:"
+          cat script.js | head -5
+
+      - name: Copy files to deploy folder
+        run: |
+          mkdir -p deploy
+          cp index.html deploy/
+          cp style.css deploy/
+          cp script.js deploy/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./deploy
           publish_branch: gh-pages
-          exclude_assets: '.github,backend,*.md'
 
       - name: Done!
-        run: echo "🚀 Deployed successfully to GitHub Pages!"
+        run: echo "Deployed successfully to GitHub Pages!"
