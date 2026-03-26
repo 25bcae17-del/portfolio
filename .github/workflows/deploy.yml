@@ -59,6 +59,7 @@ jobs:
           cp index.html deploy/
           cp style.css deploy/
           cp script.js deploy/
+          cp admin.html deploy/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
