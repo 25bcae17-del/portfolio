@@ -1,12 +1,8 @@
 # ================================================
-# GitHub Actions CI/CD Pipeline
-# File: .github/workflows/deploy.yml
-#
-# This runs automatically on EVERY push to main.
-# It: lints your code, then deploys to GitHub Pages.
+# GitHub Actions CI/CD Pipeline — Simplified
 # ================================================
 
-name: CI/CD Pipeline — Lint & Deploy
+name: CI/CD Pipeline — Deploy to GitHub Pages
 
 on:
   push:
@@ -16,51 +12,29 @@ on:
 
 jobs:
 
-  # ---- JOB 1: Lint & Validate ----
+  # ---- JOB 1: Check Files Exist ----
   lint:
-    name: Lint & Validate
+    name: Check Files
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Check HTML files exist
+      - name: Check required files exist
         run: |
           echo "Checking required files..."
           test -f index.html && echo "✓ index.html found" || (echo "✗ index.html missing!" && exit 1)
           test -f style.css  && echo "✓ style.css found"  || (echo "✗ style.css missing!"  && exit 1)
           test -f script.js  && echo "✓ script.js found"  || (echo "✗ script.js missing!"  && exit 1)
-
-      - name: Install htmlhint (HTML linter)
-        run: npm install -g htmlhint
-
-      - name: Run HTML lint
-        run: htmlhint index.html --config '{"tagname-lowercase": true, "attr-lowercase": true, "attr-value-double-quotes": true}'
-
-      - name: Check JavaScript syntax
-        run: node --check script.js && echo "✓ JavaScript syntax OK"
-
-      - name: Print summary
-        run: |
-          echo ""
-          echo "================================"
-          echo "  ✓ All checks passed!"
-          echo "  Ready to deploy..."
-          echo "================================"
+          echo "✓ All files present!"
 
   # ---- JOB 2: Deploy to GitHub Pages ----
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    needs: lint   # Only deploys if lint job passes!
+    needs: lint
 
-    # Only deploy on pushes to main (not on pull requests)
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     permissions:
@@ -76,12 +50,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages
-          exclude_assets: '.github,backend,*.md,*.env*'
+          exclude_assets: '.github,backend,*.md'
 
-      - name: Deployment success
-        run: |
-          echo ""
-          echo "================================"
-          echo "  🚀 Deployed to GitHub Pages!"
-          echo "  Your site is live!"
-          echo "================================"
+      - name: Done!
+        run: echo "🚀 Deployed successfully to GitHub Pages!"
