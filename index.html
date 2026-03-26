@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinmay Karthik — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">CK</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-tag">BCA Student & Aspiring Developer</p>
+      <h1 class="hero-name">Chinmay<br/><span>Karthik</span></h1>
+      <p class="hero-sub">Building modern web experiences — from pixel-perfect frontends to robust backends and CI/CD pipelines.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title">Who I Am</h2>
+          <div class="about-card">
+            <div class="about-avatar">CK</div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-intro">
+            I'm <strong>Chinmay Karthik</strong>, a passionate BCA student on a mission to master modern web development — from crafting beautiful user interfaces to architecting scalable backend systems.
+          </p>
+          <p class="about-body">
+            I believe in learning by building. Every project I take on is an opportunity to understand not just the code, but the entire workflow: version control, continuous integration, database design, and cloud deployment.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">BCA</span>
+              <span class="stat-label">Degree</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">Full</span>
+              <span class="stat-label">Stack Focus</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">02 / Skills</div>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>DevOps & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Deployment</h3>
+          <div class="skill-tags">
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">Render.com</span>
+            <span class="tag">Environment Config</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-bars">
+        <div class="skill-bar-item" data-skill="HTML / CSS" data-level="85">
+          <div class="skill-bar-label"><span>HTML / CSS</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-bar-item" data-skill="JavaScript" data-level="70">
+          <div class="skill-bar-label"><span>JavaScript</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:70%"></div></div>
+        </div>
+        <div class="skill-bar-item" data-skill="Node.js / Express" data-level="60">
+          <div class="skill-bar-label"><span>Node.js / Express</span><span class="skill-pct">60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:60%"></div></div>
+        </div>
+        <div class="skill-bar-item" data-skill="PostgreSQL" data-level="50">
+          <div class="skill-bar-label"><span>PostgreSQL</span><span class="skill-pct">50%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:50%"></div></div>
+        </div>
+        <div class="skill-bar-item" data-skill="Git & CI/CD" data-level="65">
+          <div class="skill-bar-label"><span>Git & CI/CD</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:65%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">03 / Projects</div>
+      <h2 class="section-title">My Work</h2>
+      <div class="projects-grid">
+        <div class="project-card featured">
+          <div class="project-badge">Featured</div>
+          <div class="project-number">01</div>
+          <h3>Full-Stack Portfolio</h3>
+          <p>This very portfolio — built with HTML/CSS/JS frontend, Node.js + Express backend, PostgreSQL database, deployed via GitHub Pages & Render with a full CI/CD pipeline.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>Node.js</span><span>PostgreSQL</span><span>GitHub Actions</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-live">Live →</a>
+            <a href="#" class="link-code">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-number">02</div>
+          <h3>Contact Manager API</h3>
+          <p>A RESTful API built with Express.js that stores and retrieves contact information from a PostgreSQL database. Includes input validation and error handling.</p>
+          <div class="project-tech">
+            <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-code">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-number">03</div>
+          <h3>Responsive Landing Page</h3>
+          <p>A pixel-perfect responsive landing page with smooth scroll animations, mobile navigation, and modern CSS techniques like Grid and custom properties.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS Grid</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-live">Live →</a>
+            <a href="#" class="link-code">GitHub →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section id="workflow">
+    <div class="container">
+      <div class="section-label">04 / Workflow</div>
+      <h2 class="section-title">Modern Dev Workflow</h2>
+      <p class="workflow-desc">My HOD's recommended workflow — the complete pipeline from code to live website.</p>
+      <div class="workflow-diagram">
+        <div class="wf-step">
+          <div class="wf-icon">💻</div>
+          <div class="wf-label">Local Git<br/>Repository</div>
+          <div class="wf-sublabel">Write & commit code</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-icon">🐙</div>
+          <div class="wf-label">GitHub</div>
+          <div class="wf-sublabel">Push & collaborate</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-icon">⚙️</div>
+          <div class="wf-label">CI/CD</div>
+          <div class="wf-sublabel">Testing & Linting</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-icon">🚀</div>
+          <div class="wf-label">Hosting</div>
+          <div class="wf-sublabel">Website + Database</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-icon">🌐</div>
+          <div class="wf-label">Web Browser</div>
+          <div class="wf-sublabel">Live for the world</div>
+        </div>
+      </div>
+      <div class="workflow-tools">
+        <div class="tool-pill">Git</div>
+        <div class="tool-pill">GitHub</div>
+        <div class="tool-pill">GitHub Actions</div>
+        <div class="tool-pill">GitHub Pages</div>
+        <div class="tool-pill">Render.com</div>
+        <div class="tool-pill">PostgreSQL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">05 / Contact</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">Have a project idea or want to connect? Drop a message — it goes straight into my database!</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p>chinmay.karthik@example.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <strong>GitHub</strong>
+              <p>github.com/chinmaykarthik</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <p>linkedin.com/in/chinmaykarthik</p>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-status" id="formStatus"></div>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+            <span>Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-name">Chinmay Karthik</p>
+        <p class="footer-copy">© 2025 · Built with HTML, CSS, JavaScript, Node.js & PostgreSQL</p>
+        <p class="footer-deploy">Deployed on GitHub Pages + Render.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
