@@ -75,7 +75,7 @@ const submitBtn = document.getElementById('submitBtn');
 
 // IMPORTANT: Replace this URL with your actual Render.com backend URL after deployment
 // Example: 'https://chinmay-portfolio-backend.onrender.com/api/contact'
-const BACKEND_URL = 'https://YOUR-BACKEND-NAME.onrender.com/api/contact';
+const BACKEND_URL = 'https://portfolio-hfk1.onrender.com/';
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
